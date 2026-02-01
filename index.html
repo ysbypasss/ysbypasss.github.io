@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ysbypass | Work in Progress</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 10px;
+        }
+        body {
+            background: #000000;
+            background-image: 
+                radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.15) 0, transparent 50%);
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 4rem 1rem;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 1);
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+        }
+        .protection-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            cursor: default;
+        }
+        .glow-text {
+            text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+        }
+        .logo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .logo-wrapper img {
+            height: clamp(40px, 12vw, 70px);
+            width: auto;
+            display: block;
+        }
+        .instruction-step {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border-left: 3px solid rgba(59, 130, 246, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .instruction-step:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-left: 3px solid rgba(59, 130, 246, 1);
+            transform: translateX(5px);
+        }
+        .note-container {
+            border: 1px dashed rgba(59, 130, 246, 0.2);
+            background: rgba(59, 130, 246, 0.02);
+        }
+        .cool-btn-container {
+            position: relative;
+            padding: 2px;
+            display: inline-block;
+            border-radius: 9999px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            z-index: 20;
+        }
+        .cool-btn-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, transparent, transparent, #3b82f6);
+            animation: rotate 4s linear infinite;
+        }
+        .btn-download {
+            position: relative;
+            z-index: 21;
+            background: #080a0f;
+            color: white;
+            padding: 14px 50px;
+            border-radius: 9999px;
+            display: block;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-download:hover {
+            background: #0f172a;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <div class="glass text-center p-8 md:p-16 lg:p-20 rounded-[2.5rem] md:rounded-[3.5rem] my-auto">
+        <div class="protection-overlay"></div>
+        
+        <div class="relative z-10">
+            <div class="logo-wrapper mb-8 md:mb-14">
+                <img src="./logo.png" alt="Ysbypass Logo">
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-800 mb-6 md:mb-10 tracking-tight glow-text leading-tight">
+                Work in progress.
+            </h1>
+            
+            <p class="text-base md:text-xl text-slate-400 leading-relaxed font-300 max-w-2xl mx-auto mb-12">
+                Please come back soon for the release! 
+                We are currently optimizing the experience and ensuring high success rate and undetection.
+            </p>
+
+            <div class="mb-14">
+                <p class="text-blue-400 text-sm md:text-base font-400 mb-6 opacity-90">
+                    Wanna try it out before release?
+                </p>
+                <div class="cool-btn-container">
+                    <a href="https://github.com/ysbypass/ysbypass/releases/download/0.6/ysbypass-.beta.zip" class="btn-download">
+                        Download Beta
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-3 max-w-2xl mx-auto text-left">
+                <div class="instruction-step p-4 rounded-r-xl">
+                    <div class="flex items-center gap-4">
+                        <span class="text-blue-500 font-800 text-lg opacity-50">01</span>
+                        <p class="text-xs md:text-sm text-slate-300">Download the zip and extract it to a folder on your computer.</p>
+                    </div>
+                </div>
+                <div class="instruction-step p-4 rounded-r-xl">
+                    <div class="flex items-center gap-4">
+                        <span class="text-blue-500 font-800 text-lg opacity-50">02</span>
+                        <p class="text-xs md:text-sm text-slate-300">Open <span class="text-blue-300 px-1 border border-blue-900/50 bg-blue-900/20 rounded select-all cursor-text relative z-30">chrome://extensions</span> and enable "Developer mode".</p>
+                    </div>
+                </div>
+                <div class="instruction-step p-4 rounded-r-xl">
+                    <div class="flex items-center gap-4">
+                        <span class="text-blue-500 font-800 text-lg opacity-50">03</span>
+                        <p class="text-xs md:text-sm text-slate-300">Click "Load unpacked" and select the folder you just extracted.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-container mt-8 p-5 rounded-2xl max-w-2xl mx-auto text-left">
+                <p class="text-[10px] md:text-xs text-blue-400 font-800 uppercase tracking-widest mb-2 italic">Note</p>
+                <p class="text-xs md:text-sm text-slate-500 leading-relaxed italic">
+                    The bypass is semi-manual: solve the turnstile captcha and click the social tasks to trigger the skip.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-12 w-full text-center text-slate-700 text-[10px] md:text-xs tracking-[0.3em] uppercase px-4 pb-4">
+        <p>&copy; <span id="year"></span> Ysbypass</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 85 || e.keyCode === 73 || e.keyCode === 74)) {
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>
