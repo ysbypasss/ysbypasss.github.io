@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ysbypass</title>
+    <title>Ysbypass | Work in Progress</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap" rel="stylesheet">
@@ -43,6 +43,12 @@
             width: 100%;
             max-width: 900px;
             position: relative;
+        }
+        .protection-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            cursor: default;
         }
         .glow-text {
             text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
@@ -120,6 +126,8 @@
 <body oncontextmenu="return false;">
 
     <div class="glass text-center p-8 md:p-16 lg:p-20 rounded-[2.5rem] md:rounded-[3.5rem] my-auto">
+        <div class="protection-overlay"></div>
+        
         <div class="relative z-10">
             <div class="logo-wrapper mb-8 md:mb-14">
                 <img src="./logo.png" alt="Ysbypass Logo">
@@ -130,16 +138,17 @@
             </h1>
             
             <p class="text-base md:text-xl text-slate-400 leading-relaxed font-300 max-w-2xl mx-auto mb-12">
-                The extension is currently in beta. Please ensure you are following the installation steps correctly for it to function.
+                Please come back soon for the release! 
+                We are currently optimizing the experience and ensuring high success rate and undetection.
             </p>
 
             <div class="mb-14">
                 <p class="text-blue-400 text-sm md:text-base font-400 mb-6 opacity-90">
-                    Ready to test the latest version?
+                    Wanna try it out before release?
                 </p>
                 <div class="cool-btn-container">
                     <a href="https://github.com/ysbypasss/ysbypasss.github.io/releases/download/0.6/ysbypass-.beta.zip" class="btn-download">
-                        Download Beta 0.6
+                        Download Beta
                     </a>
                 </div>
             </div>
@@ -148,27 +157,27 @@
                 <div class="instruction-step p-4 rounded-r-xl">
                     <div class="flex items-center gap-4">
                         <span class="text-blue-500 font-800 text-lg opacity-50">01</span>
-                        <p class="text-xs md:text-sm text-slate-300">Download the ZIP and extract it to a permanent folder on your PC.</p>
+                        <p class="text-xs md:text-sm text-slate-300">Download the zip and extract it to a folder on your computer.</p>
                     </div>
                 </div>
                 <div class="instruction-step p-4 rounded-r-xl">
                     <div class="flex items-center gap-4">
                         <span class="text-blue-500 font-800 text-lg opacity-50">02</span>
-                        <p class="text-xs md:text-sm text-slate-300">Navigate to <span class="text-blue-300 px-1 border border-blue-900/50 bg-blue-900/20 rounded select-all cursor-text relative z-30">chrome://extensions</span> and enable <b>Developer mode</b>.</p>
+                        <p class="text-xs md:text-sm text-slate-300">Open <span class="text-blue-300 px-1 border border-blue-900/50 bg-blue-900/20 rounded select-all cursor-text relative z-30">chrome://extensions</span> and enable "Developer mode".</p>
                     </div>
                 </div>
                 <div class="instruction-step p-4 rounded-r-xl">
                     <div class="flex items-center gap-4">
                         <span class="text-blue-500 font-800 text-lg opacity-50">03</span>
-                        <p class="text-xs md:text-sm text-slate-300">Select <b>Load unpacked</b> and point it to your extracted folder.</p>
+                        <p class="text-xs md:text-sm text-slate-300">Click "Load unpacked" and select the folder you just extracted.</p>
                     </div>
                 </div>
             </div>
 
             <div class="note-container mt-8 p-5 rounded-2xl max-w-2xl mx-auto text-left">
-                <p class="text-[10px] md:text-xs text-blue-400 font-800 uppercase tracking-widest mb-2 italic">Developer Note</p>
+                <p class="text-[10px] md:text-xs text-blue-400 font-800 uppercase tracking-widest mb-2 italic">Note</p>
                 <p class="text-xs md:text-sm text-slate-500 leading-relaxed italic">
-                    If you encounter a 404, verify that the release asset is set to public and the ZIP file name matches exactly.
+                    The bypass is semi-manual: solve the turnstile captcha and click the social tasks to trigger the skip.
                 </p>
             </div>
         </div>
